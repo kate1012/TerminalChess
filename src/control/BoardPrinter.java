@@ -7,7 +7,7 @@ import model.BoardInterface;
 import model.PieceInterface;
 
 /**
- * @author ben
+ * @author Ben Green & Kate Sussman
  *
  */
 public class BoardPrinter {

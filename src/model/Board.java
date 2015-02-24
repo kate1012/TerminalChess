@@ -95,6 +95,14 @@ public class Board implements BoardInterface {
 		}
 		
 	}
+	
+	public String getStatus() {
+		return status;
+	}
+	
+	public String getWhoseTurn() {
+		return whose_turn;
+	}
 
 	
 
