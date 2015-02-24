@@ -3,6 +3,9 @@
  */
 package view;
 
+import control.BoardPrinter;
+import model.Board;
+
 /**
  * @author Ben Green & Kate Sussman
  *
@@ -14,9 +17,7 @@ public class CmdView {
 		//initialize board
 		Board board = new Board();
 		
-		while (board.getStatus().equals("progressing")) {
-			//get commands
-		}
+		BoardPrinter.printBoard(board);
 
 	}
 

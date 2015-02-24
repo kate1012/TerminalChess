@@ -3,6 +3,8 @@
  */
 package model;
 
+import java.util.HashMap;
+
 /**
  * @author Ben Green & Kate Sussman
  *
@@ -14,23 +16,28 @@ public interface BoardInterface {
 	 * @param type Piece's type
 	 * @param location Place on board to put piece (a4, b2, etc.)
 	 */
-	public void addPiece(String color, String type, String location);
+	public void addPiece(String color, String type, Integer location);
 	
 	/**Remove piece from board.
 	 * @param location Location of piece to remove
 	 */
-	public void removePiece(String location);
+	public void removePiece(Integer location);
 	
 	/**Move piece from one place to another on board
 	 * @param start_location Current location of piece
 	 * @param end_location Destination of piece
 	 */
-	public void movePiece(String start_location, String end_location);
+	public void movePiece(Integer start_location, Integer end_location);
 	
 	/**Checks if a piece exists at the specified location
 	 * @param location Location to search for piece
 	 * @return Piece at location or null if no piece found
 	 */
-	public PieceInterface containsPiece(String location);
+	public PieceInterface getPieceAt(Integer location);
+	
+	/**Switches current player when a turn has ended
+	 * 
+	 */
+	public void switchPlayer();
 
 }
