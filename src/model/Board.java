@@ -96,10 +96,12 @@ public class Board implements BoardInterface {
 		
 	}
 	
+	@Override
 	public String getStatus() {
 		return status;
 	}
 	
+	@Override
 	public String getWhoseTurn() {
 		return whose_turn;
 	}

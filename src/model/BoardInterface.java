@@ -11,6 +11,14 @@ import java.util.HashMap;
  */
 public interface BoardInterface {
 	
+	enum status{
+		PROGRESSING, STALEMATE, DRAW, FINISHED, RESIGNED
+	}
+	
+	enum player{
+		WHITE, BLACK
+	}
+	
 	/**Add chess piece to board.
 	 * @param color Piece's color
 	 * @param type Piece's type
@@ -39,5 +47,15 @@ public interface BoardInterface {
 	 * 
 	 */
 	public void switchPlayer();
+	
+	/**Get board's status
+	 * @return current status
+	 */
+	public String getStatus();
+	
+	/**Returns player who should make the next move
+	 * @return White or Black
+	 */
+	public String getWhoseTurn();
 
 }
